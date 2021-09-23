@@ -1,5 +1,5 @@
 /* footer */
-.footer {
+.app__ooter {
     border-top: 4px solid var(--primary-color);
     padding: 16px 0 0 0;
     background-color: var(--white-color);
@@ -16,9 +16,7 @@
     list-style: none;
 }
 
-.footer-item {
-
-}
+.footer-item {}
 
 .footer-item__link {
     display: block;
@@ -34,7 +32,7 @@
     color: var(--primary-color);
 }
 
-.footer-item__link-icon{ 
+.footer-item__link-icon {
     font-size: 2rem;
     margin-right: 3px;
 }
@@ -60,6 +58,7 @@
     flex-direction: column;
     justify-content: center;
 }
+
 .footer__download-apps-link {
     color: transparent;
     text-decoration: none;
@@ -86,3 +85,4 @@
     text-decoration: none;
     color: var(--primary-color);
 }
+

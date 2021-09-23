@@ -6,27 +6,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/container.css">
-    <link rel="stylesheet" href="./assets/css/footer.css">
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./assets/css/Base.css">
+    <link rel="stylesheet" href="./assets/css/Grid.css">
+    <link rel="stylesheet" href="./assets/css/Header.css">
+    <link rel="stylesheet" href="./assets/css/Container.css">
+    <link rel="stylesheet" href="./assets/css/Footer.css">
+    <link rel="stylesheet" href="./assets/css/Responsive.css">
     <link rel="shortcut icon" href="./assets/img/shopee.png">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="main_body">
 
         <div class="app__header">
-            <div class="grid">
+            <div class="grid wide">
                 <!-- header navagation -->
-                <nav class="header__navbar">
+                <nav class="header__navbar hide-on-mobile-tablet">
 
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--qr header__navbar-item--separate">
@@ -143,9 +145,10 @@
 
                         <!-- <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">Đăng Kí</li> -->
                         <!-- <li class="header__navbar-item header__navbar-item--strong">Đăng Nhập</li> -->
-                        
+
                         <li class="header__navbar-item header__navbar-user">
-                            <img src="https://scontent.fsgn2-4.fna.fbcdn.net/v/t1.6435-9/234619539_934800874030353_7939800173075927129_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=zzZjQmdxWyIAX-ehTnh&_nc_ht=scontent.fsgn2-4.fna&oh=081fb91288dd18aa3f152d12290ccca2&oe=614931E2" alt="" class="header__navbar-user-avatar">
+                            <img src="https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.6435-9/241430952_957534451756995_572268774850614610_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=omhkYdfyP8kAX9Lbl7N&_nc_ht=scontent.fsgn2-1.fna&oh=79f0c9f88b55a33e0ff366baa8d0af60&oe=616E50DF"
+                                alt="" class="header__navbar-user-avatar">
                             <span class="header__navbar-user-username">Trần Lộc</span>
 
                             <ul class="header__navbar-user-menu">
@@ -170,8 +173,11 @@
 
                 <!-- header with search -->
                 <div class="header-with-search">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="fas fa-search"></i>
+                    </label>
                     <!-- logo shoppe  -->
-                    <div class="header__logo">
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -182,6 +188,8 @@
                             </svg>
                         </a>
                     </div>
+
+                    <input type="checkbox" id="mobile-search-checkbox" class="header__search-checkbox" hidden>
 
                     <div class="header__search">
                         <div class="header__search-input-wrap">
@@ -241,7 +249,8 @@
                                 <ul class="header__cart-listItem">
                                     <!-- list cart item  -->
                                     <li class="header__cart-Item">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7-VbeOqIov0-bImxY_AWCnjaeE-EDt7Etdw&usqp=CAU" alt="" class="header__cart-img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7-VbeOqIov0-bImxY_AWCnjaeE-EDt7Etdw&usqp=CAU"
+                                            alt="" class="header__cart-img">
                                         <div class="header__cart-Item-Info">
                                             <div class="header__cart-Item-head">
                                                 <h5 class="header__cart-Item-name">Mỹ Phẩm Ếch Xanh Chính Hãng</h5>
@@ -253,14 +262,16 @@
                                             </div>
 
                                             <div class="header__cart-Item-body">
-                                                <div class="header__cart-Item-desciption">Phân Loại: Tinh Dầu , Mỹ Phẩm</div>
+                                                <div class="header__cart-Item-desciption">Phân Loại: Tinh Dầu , Mỹ Phẩm
+                                                </div>
                                                 <span class="header__cart-Item-remove">Xóa</span>
                                             </div>
                                         </div>
                                     </li>
 
                                     <li class="header__cart-Item">
-                                        <img src="https://vn-test-11.slatic.net/p/a9acc00477fcb7dd9cc4b194ccda31c2.jpg_720x720q80.jpg_.webp" alt="" class="header__cart-img">
+                                        <img src="https://vn-test-11.slatic.net/p/a9acc00477fcb7dd9cc4b194ccda31c2.jpg_720x720q80.jpg_.webp"
+                                            alt="" class="header__cart-img">
                                         <div class="header__cart-Item-Info">
                                             <div class="header__cart-Item-head">
                                                 <h5 class="header__cart-Item-name">Áo Thun Nữ - Đỏ Cá Tính</h5>
@@ -279,10 +290,12 @@
                                     </li>
 
                                     <li class="header__cart-Item">
-                                        <img src="https://vn-test-11.slatic.net/p/f2d8040fe9876f2fbb119fe79a3e955e.png_720x720q80.jpg_.webp" alt="" class="header__cart-img">
+                                        <img src="https://vn-test-11.slatic.net/p/f2d8040fe9876f2fbb119fe79a3e955e.png_720x720q80.jpg_.webp"
+                                            alt="" class="header__cart-img">
                                         <div class="header__cart-Item-Info">
                                             <div class="header__cart-Item-head">
-                                                <h5 class="header__cart-Item-name">Quần Jogger Nam Vải Thun Lạnh Cao Cấp...</h5>
+                                                <h5 class="header__cart-Item-name">Quần Jogger Nam Vải Thun Lạnh Cao
+                                                    Cấp...</h5>
                                                 <div class="header__cart-Item-price-wrap">
                                                     <span class="header__cart-Item-price">700.000đ</span>
                                                     <span class="header__cart-Item-mutiply">x</span>
@@ -296,9 +309,10 @@
                                             </div>
                                         </div>
                                     </li>
-                                    
+
                                     <li class="header__cart-Item">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7-VbeOqIov0-bImxY_AWCnjaeE-EDt7Etdw&usqp=CAU" alt="" class="header__cart-img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7-VbeOqIov0-bImxY_AWCnjaeE-EDt7Etdw&usqp=CAU"
+                                            alt="" class="header__cart-img">
                                         <div class="header__cart-Item-Info">
                                             <div class="header__cart-Item-head">
                                                 <h5 class="header__cart-Item-name">Mỹ Phẩm Ếch Xanh Chính Hãng</h5>
@@ -310,14 +324,16 @@
                                             </div>
 
                                             <div class="header__cart-Item-body">
-                                                <div class="header__cart-Item-desciption">Phân Loại: Tinh Dầu , Mỹ Phẩm</div>
+                                                <div class="header__cart-Item-desciption">Phân Loại: Tinh Dầu , Mỹ Phẩm
+                                                </div>
                                                 <span class="header__cart-Item-remove">Xóa</span>
                                             </div>
                                         </div>
                                     </li>
 
                                     <li class="header__cart-Item">
-                                        <img src="https://vn-test-11.slatic.net/p/a9acc00477fcb7dd9cc4b194ccda31c2.jpg_720x720q80.jpg_.webp" alt="" class="header__cart-img">
+                                        <img src="https://vn-test-11.slatic.net/p/a9acc00477fcb7dd9cc4b194ccda31c2.jpg_720x720q80.jpg_.webp"
+                                            alt="" class="header__cart-img">
                                         <div class="header__cart-Item-Info">
                                             <div class="header__cart-Item-head">
                                                 <h5 class="header__cart-Item-name">Áo Thun Nữ - Đỏ Cá Tính</h5>
@@ -336,10 +352,12 @@
                                     </li>
 
                                     <li class="header__cart-Item">
-                                        <img src="https://vn-test-11.slatic.net/p/f2d8040fe9876f2fbb119fe79a3e955e.png_720x720q80.jpg_.webp" alt="" class="header__cart-img">
+                                        <img src="https://vn-test-11.slatic.net/p/f2d8040fe9876f2fbb119fe79a3e955e.png_720x720q80.jpg_.webp"
+                                            alt="" class="header__cart-img">
                                         <div class="header__cart-Item-Info">
                                             <div class="header__cart-Item-head">
-                                                <h5 class="header__cart-Item-name">Quần Jogger Nam Vải Thun Lạnh Cao Cấp...</h5>
+                                                <h5 class="header__cart-Item-name">Quần Jogger Nam Vải Thun Lạnh Cao
+                                                    Cấp...</h5>
                                                 <div class="header__cart-Item-price-wrap">
                                                     <span class="header__cart-Item-price">700.000đ</span>
                                                     <span class="header__cart-Item-mutiply">x</span>
@@ -355,7 +373,8 @@
                                     </li>
 
                                     <li class="header__cart-Item">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7-VbeOqIov0-bImxY_AWCnjaeE-EDt7Etdw&usqp=CAU" alt="" class="header__cart-img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7-VbeOqIov0-bImxY_AWCnjaeE-EDt7Etdw&usqp=CAU"
+                                            alt="" class="header__cart-img">
                                         <div class="header__cart-Item-Info">
                                             <div class="header__cart-Item-head">
                                                 <h5 class="header__cart-Item-name">Mỹ Phẩm Ếch Xanh Chính Hãng</h5>
@@ -367,14 +386,16 @@
                                             </div>
 
                                             <div class="header__cart-Item-body">
-                                                <div class="header__cart-Item-desciption">Phân Loại: Tinh Dầu , Mỹ Phẩm</div>
+                                                <div class="header__cart-Item-desciption">Phân Loại: Tinh Dầu , Mỹ Phẩm
+                                                </div>
                                                 <span class="header__cart-Item-remove">Xóa</span>
                                             </div>
                                         </div>
                                     </li>
 
                                     <li class="header__cart-Item">
-                                        <img src="https://vn-test-11.slatic.net/p/a9acc00477fcb7dd9cc4b194ccda31c2.jpg_720x720q80.jpg_.webp" alt="" class="header__cart-img">
+                                        <img src="https://vn-test-11.slatic.net/p/a9acc00477fcb7dd9cc4b194ccda31c2.jpg_720x720q80.jpg_.webp"
+                                            alt="" class="header__cart-img">
                                         <div class="header__cart-Item-Info">
                                             <div class="header__cart-Item-head">
                                                 <h5 class="header__cart-Item-name">Áo Thun Nữ - Đỏ Cá Tính</h5>
@@ -393,10 +414,12 @@
                                     </li>
 
                                     <li class="header__cart-Item">
-                                        <img src="https://vn-test-11.slatic.net/p/f2d8040fe9876f2fbb119fe79a3e955e.png_720x720q80.jpg_.webp" alt="" class="header__cart-img">
+                                        <img src="https://vn-test-11.slatic.net/p/f2d8040fe9876f2fbb119fe79a3e955e.png_720x720q80.jpg_.webp"
+                                            alt="" class="header__cart-img">
                                         <div class="header__cart-Item-Info">
                                             <div class="header__cart-Item-head">
-                                                <h5 class="header__cart-Item-name">Quần Jogger Nam Vải Thun Lạnh Cao Cấp...</h5>
+                                                <h5 class="header__cart-Item-name">Quần Jogger Nam Vải Thun Lạnh Cao
+                                                    Cấp...</h5>
                                                 <div class="header__cart-Item-price-wrap">
                                                     <span class="header__cart-Item-price">700.000đ</span>
                                                     <span class="header__cart-Item-mutiply">x</span>
@@ -412,7 +435,8 @@
                                     </li>
 
                                     <li class="header__cart-Item">
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7-VbeOqIov0-bImxY_AWCnjaeE-EDt7Etdw&usqp=CAU" alt="" class="header__cart-img">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7-VbeOqIov0-bImxY_AWCnjaeE-EDt7Etdw&usqp=CAU"
+                                            alt="" class="header__cart-img">
                                         <div class="header__cart-Item-Info">
                                             <div class="header__cart-Item-head">
                                                 <h5 class="header__cart-Item-name">Mỹ Phẩm Ếch Xanh Chính Hãng</h5>
@@ -424,14 +448,16 @@
                                             </div>
 
                                             <div class="header__cart-Item-body">
-                                                <div class="header__cart-Item-desciption">Phân Loại: Tinh Dầu , Mỹ Phẩm</div>
+                                                <div class="header__cart-Item-desciption">Phân Loại: Tinh Dầu , Mỹ Phẩm
+                                                </div>
                                                 <span class="header__cart-Item-remove">Xóa</span>
                                             </div>
                                         </div>
                                     </li>
 
                                     <li class="header__cart-Item">
-                                        <img src="https://vn-test-11.slatic.net/p/a9acc00477fcb7dd9cc4b194ccda31c2.jpg_720x720q80.jpg_.webp" alt="" class="header__cart-img">
+                                        <img src="https://vn-test-11.slatic.net/p/a9acc00477fcb7dd9cc4b194ccda31c2.jpg_720x720q80.jpg_.webp"
+                                            alt="" class="header__cart-img">
                                         <div class="header__cart-Item-Info">
                                             <div class="header__cart-Item-head">
                                                 <h5 class="header__cart-Item-name">Áo Thun Nữ - Đỏ Cá Tính</h5>
@@ -450,10 +476,12 @@
                                     </li>
 
                                     <li class="header__cart-Item">
-                                        <img src="https://vn-test-11.slatic.net/p/f2d8040fe9876f2fbb119fe79a3e955e.png_720x720q80.jpg_.webp" alt="" class="header__cart-img">
+                                        <img src="https://vn-test-11.slatic.net/p/f2d8040fe9876f2fbb119fe79a3e955e.png_720x720q80.jpg_.webp"
+                                            alt="" class="header__cart-img">
                                         <div class="header__cart-Item-Info">
                                             <div class="header__cart-Item-head">
-                                                <h5 class="header__cart-Item-name">Quần Jogger Nam Vải Thun Lạnh Cao Cấp...</h5>
+                                                <h5 class="header__cart-Item-name">Quần Jogger Nam Vải Thun Lạnh Cao
+                                                    Cấp...</h5>
                                                 <div class="header__cart-Item-price-wrap">
                                                     <span class="header__cart-Item-price">700.000đ</span>
                                                     <span class="header__cart-Item-mutiply">x</span>
@@ -467,7 +495,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                    
+
                                 </ul>
                                 <a href="" class="header__cart-viewCart btn btn--primary"> Xem Giỏ Hàng </a>
                             </div>
@@ -477,12 +505,26 @@
                 </div>
 
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+                <li class="header__sort-item header__sort-link--active">
+                    <a href="" class="header__sort-link ">Mới nhất</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán Chạy</a>
+                </li>
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                </li>
+            </ul>
         </div>
 
         <div class="app__container">
-            <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__column-2">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category-heading">Danh Mục</h3>
                             <ul class="category-list">
@@ -526,8 +568,8 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="grid__column-10">
-                        <div class="home-filter">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp Xếp Theo</span>
                             <button class="home-filter__btn btn">Phổ Biến</button>
                             <button class="home-filter__btn btn btn--primary">Mới Nhất</button>
@@ -561,21 +603,49 @@
                                 </div>
                             </div>
                         </div>
+                        <nav class="mobile-category">
+                            <ul class="mobile-category-list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Bộ Nhớ máy tính</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Ram máy tính</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Màn hình máy tínhMàn hình máy tínhMàn hình
+                                        máy tínhMàn hình máy tínhMàn hình máy tính</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Thẻ Nhớ SD</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Đầu đọc thẻ Nhớ SD</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Case máy tính </a>
+                                </li>
 
+                            </ul>
+                        </nav>
                         <div class="home-product">
-                            <div class="gird__row">
+                            <div class="row sm-gutter">
                                 <!-- Product Item  -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
-                                        <div class="home-product-item__img" style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);"></div>
-                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB (3200) AX4U320038G16-DRS (2x8GB)</h4>
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);">
+                                        </div>
+                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB
+                                            (3200) AX4U320038G16-DRS (2x8GB)</h4>
                                         <div class="home-product-item__price">
                                             <span class="home-product-item__price-old">4.999.000đ</span>
                                             <span class="home-product-item__price-current">3.499.000đ</span>
                                         </div>
                                         <div class="home-product-item__action">
-                                            <span class="home-product-item__action-like home-product-item__action-like--liked">
-                                                <i class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
+                                            <span
+                                                class="home-product-item__action-like home-product-item__action-like--liked">
+                                                <i
+                                                    class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
                                                 <i class="home-product-item__action-like--liked-icon fas fa-heart"></i>
                                             </span>
                                             <div class="home-product-item__action-rating">
@@ -587,8 +657,8 @@
                                             </div>
                                             <div class="home-product-item__action-sold">
                                                 <span class="home-product-item__action-sold-content">
-                                                <span class="home-product-item__action-number-sold">16</span>
-                                                đã bán
+                                                    <span class="home-product-item__action-number-sold">16</span>
+                                                    đã bán
                                                 </span>
                                             </div>
                                         </div>
@@ -606,17 +676,22 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
-                                        <div class="home-product-item__img" style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);"></div>
-                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB (3200) AX4U320038G16-DRS (2x8GB)</h4>
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);">
+                                        </div>
+                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB
+                                            (3200) AX4U320038G16-DRS (2x8GB)</h4>
                                         <div class="home-product-item__price">
                                             <span class="home-product-item__price-old">4.999.000đ</span>
                                             <span class="home-product-item__price-current">3.499.000đ</span>
                                         </div>
                                         <div class="home-product-item__action">
-                                            <span class="home-product-item__action-like home-product-item__action-like--liked">
-                                                <i class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
+                                            <span
+                                                class="home-product-item__action-like home-product-item__action-like--liked">
+                                                <i
+                                                    class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
                                                 <i class="home-product-item__action-like--liked-icon fas fa-heart"></i>
                                             </span>
                                             <div class="home-product-item__action-rating">
@@ -628,8 +703,8 @@
                                             </div>
                                             <div class="home-product-item__action-sold">
                                                 <span class="home-product-item__action-sold-content">
-                                                <span class="home-product-item__action-number-sold">16</span>
-                                                đã bán
+                                                    <span class="home-product-item__action-number-sold">16</span>
+                                                    đã bán
                                                 </span>
                                             </div>
                                         </div>
@@ -647,17 +722,22 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
-                                        <div class="home-product-item__img" style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);"></div>
-                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB (3200) AX4U320038G16-DRS (2x8GB)</h4>
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);">
+                                        </div>
+                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB
+                                            (3200) AX4U320038G16-DRS (2x8GB)</h4>
                                         <div class="home-product-item__price">
                                             <span class="home-product-item__price-old">4.999.000đ</span>
                                             <span class="home-product-item__price-current">3.499.000đ</span>
                                         </div>
                                         <div class="home-product-item__action">
-                                            <span class="home-product-item__action-like home-product-item__action-like--liked">
-                                                <i class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
+                                            <span
+                                                class="home-product-item__action-like home-product-item__action-like--liked">
+                                                <i
+                                                    class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
                                                 <i class="home-product-item__action-like--liked-icon fas fa-heart"></i>
                                             </span>
                                             <div class="home-product-item__action-rating">
@@ -669,8 +749,8 @@
                                             </div>
                                             <div class="home-product-item__action-sold">
                                                 <span class="home-product-item__action-sold-content">
-                                                <span class="home-product-item__action-number-sold">16</span>
-                                                đã bán
+                                                    <span class="home-product-item__action-number-sold">16</span>
+                                                    đã bán
                                                 </span>
                                             </div>
                                         </div>
@@ -688,17 +768,22 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
-                                        <div class="home-product-item__img" style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);"></div>
-                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB (3200) AX4U320038G16-DRS (2x8GB)</h4>
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);">
+                                        </div>
+                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB
+                                            (3200) AX4U320038G16-DRS (2x8GB)</h4>
                                         <div class="home-product-item__price">
                                             <span class="home-product-item__price-old">4.999.000đ</span>
                                             <span class="home-product-item__price-current">3.499.000đ</span>
                                         </div>
                                         <div class="home-product-item__action">
-                                            <span class="home-product-item__action-like home-product-item__action-like--liked">
-                                                <i class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
+                                            <span
+                                                class="home-product-item__action-like home-product-item__action-like--liked">
+                                                <i
+                                                    class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
                                                 <i class="home-product-item__action-like--liked-icon fas fa-heart"></i>
                                             </span>
                                             <div class="home-product-item__action-rating">
@@ -710,8 +795,8 @@
                                             </div>
                                             <div class="home-product-item__action-sold">
                                                 <span class="home-product-item__action-sold-content">
-                                                <span class="home-product-item__action-number-sold">16</span>
-                                                đã bán
+                                                    <span class="home-product-item__action-number-sold">16</span>
+                                                    đã bán
                                                 </span>
                                             </div>
                                         </div>
@@ -729,17 +814,22 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
-                                        <div class="home-product-item__img" style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);"></div>
-                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB (3200) AX4U320038G16-DRS (2x8GB)</h4>
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);">
+                                        </div>
+                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB
+                                            (3200) AX4U320038G16-DRS (2x8GB)</h4>
                                         <div class="home-product-item__price">
                                             <span class="home-product-item__price-old">4.999.000đ</span>
                                             <span class="home-product-item__price-current">3.499.000đ</span>
                                         </div>
                                         <div class="home-product-item__action">
-                                            <span class="home-product-item__action-like home-product-item__action-like--liked">
-                                                <i class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
+                                            <span
+                                                class="home-product-item__action-like home-product-item__action-like--liked">
+                                                <i
+                                                    class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
                                                 <i class="home-product-item__action-like--liked-icon fas fa-heart"></i>
                                             </span>
                                             <div class="home-product-item__action-rating">
@@ -751,8 +841,8 @@
                                             </div>
                                             <div class="home-product-item__action-sold">
                                                 <span class="home-product-item__action-sold-content">
-                                                <span class="home-product-item__action-number-sold">16</span>
-                                                đã bán
+                                                    <span class="home-product-item__action-number-sold">16</span>
+                                                    đã bán
                                                 </span>
                                             </div>
                                         </div>
@@ -770,17 +860,22 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
-                                        <div class="home-product-item__img" style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);"></div>
-                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB (3200) AX4U320038G16-DRS (2x8GB)</h4>
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);">
+                                        </div>
+                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB
+                                            (3200) AX4U320038G16-DRS (2x8GB)</h4>
                                         <div class="home-product-item__price">
                                             <span class="home-product-item__price-old">4.999.000đ</span>
                                             <span class="home-product-item__price-current">3.499.000đ</span>
                                         </div>
                                         <div class="home-product-item__action">
-                                            <span class="home-product-item__action-like home-product-item__action-like--liked">
-                                                <i class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
+                                            <span
+                                                class="home-product-item__action-like home-product-item__action-like--liked">
+                                                <i
+                                                    class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
                                                 <i class="home-product-item__action-like--liked-icon fas fa-heart"></i>
                                             </span>
                                             <div class="home-product-item__action-rating">
@@ -792,8 +887,8 @@
                                             </div>
                                             <div class="home-product-item__action-sold">
                                                 <span class="home-product-item__action-sold-content">
-                                                <span class="home-product-item__action-number-sold">16</span>
-                                                đã bán
+                                                    <span class="home-product-item__action-number-sold">16</span>
+                                                    đã bán
                                                 </span>
                                             </div>
                                         </div>
@@ -811,17 +906,22 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
-                                        <div class="home-product-item__img" style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);"></div>
-                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB (3200) AX4U320038G16-DRS (2x8GB)</h4>
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);">
+                                        </div>
+                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB
+                                            (3200) AX4U320038G16-DRS (2x8GB)</h4>
                                         <div class="home-product-item__price">
                                             <span class="home-product-item__price-old">4.999.000đ</span>
                                             <span class="home-product-item__price-current">3.499.000đ</span>
                                         </div>
                                         <div class="home-product-item__action">
-                                            <span class="home-product-item__action-like home-product-item__action-like--liked">
-                                                <i class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
+                                            <span
+                                                class="home-product-item__action-like home-product-item__action-like--liked">
+                                                <i
+                                                    class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
                                                 <i class="home-product-item__action-like--liked-icon fas fa-heart"></i>
                                             </span>
                                             <div class="home-product-item__action-rating">
@@ -833,8 +933,8 @@
                                             </div>
                                             <div class="home-product-item__action-sold">
                                                 <span class="home-product-item__action-sold-content">
-                                                <span class="home-product-item__action-number-sold">16</span>
-                                                đã bán
+                                                    <span class="home-product-item__action-number-sold">16</span>
+                                                    đã bán
                                                 </span>
                                             </div>
                                         </div>
@@ -852,17 +952,22 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
-                                        <div class="home-product-item__img" style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);"></div>
-                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB (3200) AX4U320038G16-DRS (2x8GB)</h4>
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);">
+                                        </div>
+                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB
+                                            (3200) AX4U320038G16-DRS (2x8GB)</h4>
                                         <div class="home-product-item__price">
                                             <span class="home-product-item__price-old">4.999.000đ</span>
                                             <span class="home-product-item__price-current">3.499.000đ</span>
                                         </div>
                                         <div class="home-product-item__action">
-                                            <span class="home-product-item__action-like home-product-item__action-like--liked">
-                                                <i class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
+                                            <span
+                                                class="home-product-item__action-like home-product-item__action-like--liked">
+                                                <i
+                                                    class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
                                                 <i class="home-product-item__action-like--liked-icon fas fa-heart"></i>
                                             </span>
                                             <div class="home-product-item__action-rating">
@@ -874,8 +979,8 @@
                                             </div>
                                             <div class="home-product-item__action-sold">
                                                 <span class="home-product-item__action-sold-content">
-                                                <span class="home-product-item__action-number-sold">16</span>
-                                                đã bán
+                                                    <span class="home-product-item__action-number-sold">16</span>
+                                                    đã bán
                                                 </span>
                                             </div>
                                         </div>
@@ -893,17 +998,22 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
-                                        <div class="home-product-item__img" style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);"></div>
-                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB (3200) AX4U320038G16-DRS (2x8GB)</h4>
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);">
+                                        </div>
+                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB
+                                            (3200) AX4U320038G16-DRS (2x8GB)</h4>
                                         <div class="home-product-item__price">
                                             <span class="home-product-item__price-old">4.999.000đ</span>
                                             <span class="home-product-item__price-current">3.499.000đ</span>
                                         </div>
                                         <div class="home-product-item__action">
-                                            <span class="home-product-item__action-like home-product-item__action-like--liked">
-                                                <i class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
+                                            <span
+                                                class="home-product-item__action-like home-product-item__action-like--liked">
+                                                <i
+                                                    class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
                                                 <i class="home-product-item__action-like--liked-icon fas fa-heart"></i>
                                             </span>
                                             <div class="home-product-item__action-rating">
@@ -915,8 +1025,8 @@
                                             </div>
                                             <div class="home-product-item__action-sold">
                                                 <span class="home-product-item__action-sold-content">
-                                                <span class="home-product-item__action-number-sold">16</span>
-                                                đã bán
+                                                    <span class="home-product-item__action-number-sold">16</span>
+                                                    đã bán
                                                 </span>
                                             </div>
                                         </div>
@@ -934,17 +1044,22 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-3 c-6">
                                     <a href="#" class="home-product-item">
-                                        <div class="home-product-item__img" style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);"></div>
-                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB (3200) AX4U320038G16-DRS (2x8GB)</h4>
+                                        <div class="home-product-item__img"
+                                            style="background-image: url(https://lh3.googleusercontent.com/AfY7keKFpiHz3RYDLH7ue4CdHWsglew83FVYvsQeDZ1N07fMvRG0InhXoIIXd8omvLDwEzuNHeh9z17ISQM=rw-w300);">
+                                        </div>
+                                        <h4 class="home-product-item__name">Bộ nhớ DDR4 Adata XPG Spectrix D40 RGB 16GB
+                                            (3200) AX4U320038G16-DRS (2x8GB)</h4>
                                         <div class="home-product-item__price">
                                             <span class="home-product-item__price-old">4.999.000đ</span>
                                             <span class="home-product-item__price-current">3.499.000đ</span>
                                         </div>
                                         <div class="home-product-item__action">
-                                            <span class="home-product-item__action-like home-product-item__action-like--liked">
-                                                <i class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
+                                            <span
+                                                class="home-product-item__action-like home-product-item__action-like--liked">
+                                                <i
+                                                    class="home-product-item__action-like--no-liked-icon far fa-heart"></i>
                                                 <i class="home-product-item__action-like--liked-icon fas fa-heart"></i>
                                             </span>
                                             <div class="home-product-item__action-rating">
@@ -956,8 +1071,8 @@
                                             </div>
                                             <div class="home-product-item__action-sold">
                                                 <span class="home-product-item__action-sold-content">
-                                                <span class="home-product-item__action-number-sold">16</span>
-                                                đã bán
+                                                    <span class="home-product-item__action-number-sold">16</span>
+                                                    đã bán
                                                 </span>
                                             </div>
                                         </div>
@@ -1019,11 +1134,10 @@
             </div>
         </div>
 
-        <footer class="footer">
-            <div class="grid">
-                <div class="grid__row">
-
-                    <div class="grid__column-2-4">
+        <footer class="app__footer">
+            <div class="grid wide footer__content">
+                <div class="row">
+                    <div class="col l-2-4 m-4 c-6">
                         <ul class="footer_list">
                             <h3 class="footer__heading">Chăm sóc khách hàng</h3>
 
@@ -1032,17 +1146,16 @@
                             </li>
 
                             <li class="footer-item">
-                            <a href="" class="footer-item__link">Edgawar Mall</a>
+                                <a href="" class="footer-item__link">Edgawar Mall</a>
                             </li>
 
                             <li class="footer-item">
-                            <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                                <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
                             </li>
 
                         </ul>
                     </div>
-
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <ul class="footer_list">
                             <h3 class="footer__heading">Về chúng tôi</h3>
                             <li class="footer-item">
@@ -1050,36 +1163,34 @@
                             </li>
 
                             <li class="footer-item">
-                            <a href="" class="footer-item__link">Điều Dụng</a>
+                                <a href="" class="footer-item__link">Điều Dụng</a>
                             </li>
 
                             <li class="footer-item">
-                            <a href="" class="footer-item__link">Tuyển khoản</a>
+                                <a href="" class="footer-item__link">Tuyển khoản</a>
                             </li>
 
                         </ul>
                     </div>
-
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <ul class="footer_list">
                             <h3 class="footer__heading">Danh Mục</h3>
-                            
+
                             <li class="footer-item">
                                 <a href="" class="footer-item__link">Nội Thất</a>
                             </li>
 
                             <li class="footer-item">
-                            <a href="" class="footer-item__link">Vật dụng</a>
+                                <a href="" class="footer-item__link">Vật dụng</a>
                             </li>
 
                             <li class="footer-item">
-                            <a href="" class="footer-item__link">Linh kiện</a>
+                                <a href="" class="footer-item__link">Linh kiện</a>
                             </li>
-                            
+
                         </ul>
                     </div>
-
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <ul class="footer_list">
                             <h3 class="footer__heading">Theo dõi</h3>
 
@@ -1103,29 +1214,32 @@
 
                         </ul>
                     </div>
-
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-8 c-12">
                         <div class="footer__sub">
                             <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                             <div class="footer__download">
                                 <img src="./assets/img/QRAcode.png" alt="Download QR" class="footer__download-qr">
-                            <div class="footer__download-apps">
-                                <a href="" class="footer__download-apps-link">
-                                    <img src="./assets/img/GGplay.png" alt="Google Play" class="footer__download-apps-img">
-                                </a>
-                                <a href="" class="footer__download-apps-link">
-                                <img src="./assets/img/appStore.png" alt="App Store" class="footer__download-apps-img">
-                                </a>
+                                <div class="footer__download-apps">
+                                    <a href="" class="footer__download-apps-link">
+                                        <img src="./assets/img/GGplay.png" alt="Google Play"
+                                            class="footer__download-apps-img">
+                                    </a>
+                                    <a href="" class="footer__download-apps-link">
+                                        <img src="./assets/img/appStore.png" alt="App Store"
+                                            class="footer__download-apps-img">
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer__bottom">
-                <div class="grid">
-                    <p class="footer__text">Full Source Code tại <a href="https://github.com/EdgarIgnite16/Shoppe-Web-Demo" class="footer__text-link">đây</a></p>
+                <div class="grid wide">
+                    <p class="footer__text">Full Source Code tại <a
+                            href="https://github.com/EdgarIgnite16/Shoppe-Web-Demo" class="footer__text-link">đây</a>
+                    </p>
                     <p class="footer__text">© 2021 - Bản quyền thuộc về Công ty Edgawar</p>
                 </div>
             </div>
